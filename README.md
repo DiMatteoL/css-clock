@@ -1,5 +1,7 @@
 # CSS Clock
 
+To start the exercise, open clockSkeleton/clock.html.
+
 This exercise is designed to test candidates on their ability to:
 - **Cooperate** in a team-like environment
 - Understand simple **feature stories**
@@ -9,6 +11,8 @@ This exercise is designed to test candidates on their ability to:
 
 # Context
 You joined a team overly hyped by a bad clock website. Everything about the product sucks, but the Product team rocks! They provided the Dev team with specific user stories to ease the development process. 
+
+![Clock](./assets/clock.png)
 
 # Clock and Timer EPIC
 
@@ -26,7 +30,7 @@ ex: 12:02:54 and not 12.4:2:54
 
 ### Create a "timer" mode for the digital and analog clocks
 
-The timer mode should always start at 0 and be updated 10 times per second, with a fluid movement for the "second" hand. Both the analog and the digital clock should switch modes and be updated synchronously.
+As a user I want to be able to access a timer. The timer mode should always start at 0 and be updated 10 times per second, with a fluid movement for the "second" hand. Both the analog and the digital clock should switch modes and be updated synchronously.
 
 ### Create a "switch" button to navigate between "clock" and "timer" mode
 
