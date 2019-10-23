@@ -1,6 +1,6 @@
 # CSS Clock
 
-To start the exercise, open clockSkeleton/clock.html.
+To start the exercise, start a simple http server on local from the clockSkeleton folder.
 
 This exercise is designed to test candidates on their ability to:
 - **Cooperate** in a team-like environment
@@ -18,23 +18,24 @@ You joined a team overly hyped by a bad clock website. Everything about the prod
 
 As a user, I want to access the app the see the time. And be able to switch from "clock" mode to "timer" mode easily. I also need to be able to stop the clock in both mode, and to reset the timer.
 
-### Create an analog clock with the watch dial, based on the user's timezone
-
-As a user, I want to see a clock based on my timezone on the main page of the app. The watch dial should be updated every second and synchronised with the digital clock. The "minute" and "hour" hands must move fluidly.
-
 ### Create a 24h digital clock, based on the user's timezone
 
 As a user, I want to see a 24h digital clock based on my timezone on the main page of the app. The digit watch dial should be updated every second and synchronised with the analog clock. The  "hour", "minute" and "second" sections must be composed of two digits integers.
 
-ex: 12:02:54 and not 12.4:2:54
+ex: 15:02:54 and not 15.1:2:54
+
+### Create an analog clock with the watch dial, based on the user's timezone
+
+As a user, I want to see a clock based on my timezone on the main page of the app. The watch dial should be updated every second and synchronised with the digital clock. The "minute" and "hour" hands must move fluidly.
+
+
+### Create a "switch" button to navigate between "clock" and "timer" mode
+
+As a user I want to switch back and forth between a "clock" mode and a "timer" mode by clicking on "Clock / Timer". For now, the timer mode can be initialised and kept at 0 seconds.
 
 ### Create a "timer" mode for the digital and analog clocks
 
 As a user I want to be able to access a timer. The timer mode should always start at 0 and be updated 10 times per second, with a fluid movement for the "second" hand. Both the analog and the digital clock should switch modes and be updated synchronously.
-
-### Create a "switch" button to navigate between "clock" and "timer" mode
-
-As a user I want to switch back and forth between a "clock" mode and a "timer" mode by clicking on "Clock / Timer". The timer mode can be initialised and stay at 0 seconds.
 
 ### Create a "stop" button for both modes
 
