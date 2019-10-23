@@ -1,6 +1,6 @@
 # CSS Clock
 
-To start the exercise, open clockSkeleton/clock.html.
+To start the exercise, start a simple http server on local from the clockSkeleton folder.
 
 This exercise is designed to test candidates on their ability to:
 - **Cooperate** in a team-like environment
