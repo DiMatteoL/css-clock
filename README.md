@@ -22,7 +22,7 @@ As a user, I want to access the app the see the time. And be able to switch from
 
 As a user, I want to see a 24h digital clock based on my timezone on the main page of the app. The digit watch dial should be updated every second and synchronised with the analog clock. The  "hour", "minute" and "second" sections must be composed of two digits integers.
 
-ex: 12:02:54 and not 12.4:2:54
+ex: 15:02:54 and not 15.1:2:54
 
 ### Create an analog clock with the watch dial, based on the user's timezone
 
