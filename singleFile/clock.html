@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Clock</title>
+      <style>body{display:flex;align-items:center;justify-content:center;flex-flow:column nowrap;height:100vh;background:#d9d7dd}.clock{display:flex;border-radius:100%;background:#fff;font-family:Montserrat;border:5px solid #fff;box-shadow:inset 2px 3px 8px 0 rgba(0,0,0,.1)}.wrap{overflow:hidden;position:relative;width:350px;height:350px;border-radius:100%}.hour,.minute{position:absolute;height:100px;width:6px;margin:auto;top:-27%;left:0;bottom:0;right:0;background:#000;transform-origin:bottom center;transform:rotate(0);box-shadow:0 0 10px 0 rgba(0,0,0,.4);z-index:1}.minute{position:absolute;height:130px;width:4px;top:-38%;left:0;box-shadow:0 0 10px 0 rgba(0,0,0,.4);transform:rotate(90deg)}.second{position:absolute;height:90px;width:2px;margin:auto;top:-26%;left:0;bottom:0;right:0;border-radius:4px;background:#ff4b3e;transform-origin:bottom center;transform:rotate(180deg);z-index:1}.dot{position:absolute;top:0;left:0;right:0;bottom:0;width:12px;height:12px;border-radius:100px;background:#fff;border:2px solid #1b1b1b;border-radius:100px;margin:auto;z-index:1}.digits{font-size:3rem;font-weight:800}.buttons{display:flex}.button{padding:8px 12px;margin:8px;border:#d9d7dd solid 1px;background:#fff;border-radius:8px;cursor:pointer}.button:focus{outline:0}</style>
+    </head>
+    <body>
+      <div class="clock">
+        <div class="wrap">
+          <span class="hour"></span>
+          <span class="minute"></span>
+          <span class="second"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="digits"></div>
+      <div class="buttons">
+        <button class="button" id="switch">Clock / Timer</button>
+        <button class="button" id="stop">Stop / Start</button>
+        <button class="button" id="reset">Reset Timer</button>
+      </div>
+    </body>
+    <script>
+      /* ------ DomEvents.js ------ */
+      const updateClock = (hourDeg, minuteDeg, secondDeg) => {
+        document.querySelector('.hour').style.transform = `rotate(${hourDeg}deg)`;
+        document.querySelector('.minute').style.transform = `rotate(${minuteDeg}deg)`;
+        document.querySelector('.second').style.transform = `rotate(${secondDeg}deg)`;
+      };
+
+      const updateDigits = (hour, minute, second) => {
+        document.querySelector('.digits').innerHTML = `${hour}:${minute}:${second}`;
+      };
+
+      const clickListener = (target, callback) => {
+        document.addEventListener('click', function (event) {
+          if (!event.target.matches(target)) return;
+          event.preventDefault();
+          return callback();
+        }, false);
+      };
+
+
+      /* ------ index.js ------ */
+      const INTERVAL = 100;
+
+      const intervalRunner = () => {
+        updateDigits(2, 0, 0);
+        updateClock(0, 0, 0);
+        setTimeout(intervalRunner, INTERVAL);
+      };
+
+        intervalRunner();
+    </script>
+</html>
