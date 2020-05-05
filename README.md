@@ -18,15 +18,15 @@ You joined a team overly hyped by a bad clock website. Everything about the prod
 
 As a user, I want to access the app to see the time. And be able to switch from "clock" mode to "timer" mode easily. I also need to be able to stop the clock in both mode, and to reset the timer.
 
-### Create a 24h digital clock, based on the user's timezone
+### Update the 24h digital clock, based on the user's timezone
 
 As a user, I want to see a 24h digital clock based on my timezone on the main page of the app. The digit watch dial should be updated every second and synchronised with the analog clock. The  "hour", "minute" and "second" sections must be composed of two digits integers.
 
 ex: 15:02:54 and not 15.1:2:54
 
-### Create an analog clock with the watch dial, based on the user's timezone
+### Update the analog clock along with the watch dial, based on the user's timezone
 
-As a user, I want to see a clock based on my timezone on the main page of the app. The watch dial should be updated every second and synchronised with the digital clock. The "minute" and "hour" hands should be updated every second.
+As a user, I want to see an analog clock based on my timezone on the main page of the app. The watch dial should be updated every second and synchronised with the digital clock.  The "hour" hand should take the minutes into account and be updated every second. Same goes for the "minute' hand with the seconds.
 
 
 ### Create a "switch" button to navigate between "clock" and "timer" mode
