@@ -21,35 +21,37 @@
       </div>
     </body>
     <script>
-      /* ------ DomEvents.js ------ */
-      const updateClock = (hourDeg, minuteDeg, secondDeg) => {
+
+    /* ------ DomEvents.js ------ */
+    const updateAnalogClock = (hourDeg, minuteDeg, secondDeg) => {
         document.querySelector('.hour').style.transform = `rotate(${hourDeg}deg)`;
         document.querySelector('.minute').style.transform = `rotate(${minuteDeg}deg)`;
         document.querySelector('.second').style.transform = `rotate(${secondDeg}deg)`;
-      };
+    };
 
-      const updateDigits = (hour, minute, second) => {
+    const updateDigitClock = (hour, minute, second) => {
         document.querySelector('.digits').innerHTML = `${hour}:${minute}:${second}`;
-      };
+    };
 
-      const clickListener = (target, callback) => {
+    const clickListener = (target, callback) => {
         document.addEventListener('click', function (event) {
           if (!event.target.matches(target)) return;
           event.preventDefault();
           return callback();
         }, false);
-      };
+    };
+    /* ------------ */
 
+    /* ------ index.js ------ */
+    const INTERVAL = 1000;
 
-      /* ------ index.js ------ */
-      const INTERVAL = 100;
+    const intervalRunner = () => {
+        updateDigitClock(180, 90, 0);
+        updateAnalogClock(180, 90, 0);
+    };
 
-      const intervalRunner = () => {
-        updateDigits(2, 0, 0);
-        updateClock(0, 0, 0);
-        setTimeout(intervalRunner, INTERVAL);
-      };
+    setInterval(intervalRunner, INTERVAL);
+    /* ------------ */
 
-        intervalRunner();
     </script>
 </html>
